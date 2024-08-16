@@ -9,15 +9,15 @@ import { Hint } from "@/components/hint";
 const NewButton = () => {
   return (
     <Dialog>
-      <DialogTrigger asChild>
-        <Hint label="Create Organization" side="right">
+      <Hint label="Create Organization" side="right">
+        <DialogTrigger asChild>
           <div className="aspect-square">
             <button className="bg-white/25 h-full w-full rounded-md flex items-center justify-center opacity-60 hover:opacity-100 translate">
               <Plus className="text-white"></Plus>
             </button>
           </div>
-        </Hint>
-      </DialogTrigger>
+        </DialogTrigger>
+      </Hint>
       <DialogContent className="p-0 bg-transparent border-none max-w-[480px]">
         <CreateOrganization routing="hash" />
       </DialogContent>

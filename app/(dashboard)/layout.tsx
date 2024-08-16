@@ -1,7 +1,7 @@
 import { RedirectToUserProfile, UserButton } from "@clerk/nextjs";
 import SideBar from "./_components/sidebar/page";
 import OrgSidebar from "./_components/org-sidebar";
-import Navbar from "./_components/naavbar";
+import Navbar from "./_components/navbar";
 
 interface LayoutProps {
   children: React.ReactNode;
