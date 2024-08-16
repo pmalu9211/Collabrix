@@ -1,5 +1,5 @@
 const page = () => {
-  return <>hell naw</>;
+  return <>pratham is the best</>;
 };
 
 export default page;
