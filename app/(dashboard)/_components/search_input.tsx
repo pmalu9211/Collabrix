@@ -8,7 +8,7 @@ import { ChangeEvent, ChangeEventHandler, useEffect, useState } from "react";
 import qs from "query-string";
 const SearchInput = () => {
   const router = useRouter();
-  const [debouncedValue, setValue] = useDebounceValue("", 500);
+  const [debouncedValue, setValue] = useDebounceValue("", 200);
   const handelChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
@@ -26,7 +26,8 @@ const SearchInput = () => {
         skipEmptyString: true,
       }
     );
-    console.log("url", url);
+    // console.log("url", url);
+    router.push(url);
   }, [debouncedValue, router]);
   return (
     <div className="w-full relative">
@@ -35,6 +36,7 @@ const SearchInput = () => {
         className="pl-10 w-full max-w-[516px]"
         placeholder="Search boards"
         onChange={handelChange}
+        // value={debouncedValue}
       />
     </div>
   );
